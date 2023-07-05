@@ -1,0 +1,29 @@
+---
+# vars file for test-role
+#
+# groups to be created
+ux_groups: 
+  - groupname: "arafat"
+    gid: "1002"
+
+
+#
+# Users to be created
+users: 
+  - username: "arafat"
+    shell: "/bin/bash"
+    home: "/home/arafat"
+    groups: "aaron"
+    comment: "Arafat Shehadeh"
+    uid: "1002"
+    group: "1001"
+
+  - username: "arafat2"
+    shell: "/bin/bash"
+    home: "/home/arafat2"
+    groups: "nayel"
+    comment: "Arafat2 Shehadeh"
+    uid: "1003"
+    group: "1000"
+
+

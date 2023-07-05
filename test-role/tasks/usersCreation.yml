@@ -1,0 +1,20 @@
+---
+
+  - name: Creating Groups ....
+    group:
+      name: "{{ item.groupname }}"
+      gid: "{{ item.gid }}"
+      state: present
+    with_items: "{{ ux_groups }}"
+
+  - name: Creating users .....
+    user:
+      name: "{{ item.username }}"
+      shell: "{{ item.shell}}"
+      home: "{{ item.home }}"
+      groups: "{{ item.groups }}"
+      comment: "{{ item.comment }}"
+      uid: "{{ item.uid}}"
+      group: "{{ item.group }}"
+      state: present
+    with_items: "{{ users }}"
